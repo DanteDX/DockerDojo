@@ -20,3 +20,4 @@ CMD ["npm","start"]
 #docker run -p 3000:4000 dantedxwolf/simpleweb:latest
 #in the browser, run "192.168.99.100:4000"
 #as I am using Docker toolbox, localhost will not work here
+#...
