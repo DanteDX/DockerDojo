@@ -1,4 +1,3 @@
-#run this whole client from C:\Users\DELL
 version: '3'
 services:
   web:
@@ -10,3 +9,12 @@ services:
     volumes:
       - /app/node_modules
       - .:/app
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev # we don't need ports because we won't be interacting with it
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ["npm","run","test"]
+
